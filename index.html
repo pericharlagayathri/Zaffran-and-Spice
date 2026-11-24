@@ -1,0 +1,3651 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaffran &amp; Spice | Modern Indian Kitchen &amp; Bar</title>
+  <!-- Google Fonts: Playfair Display for elegant headings, Plus Jakarta Sans for clean UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link re
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaffran &amp; Spice | Modern Indian Kitchen &amp; Bar</title>
+  <!-- Google Fonts: Playfair Display for elegant headings, Plus Jakarta Sans for clean UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & RESET
+       Palette: Warm Terracotta Red, Rich Cream, Deep Charcoal, Saffron Gold
+       ========================================================================== */
+    :root {
+      --color-primary: #b93829;       /* Warm Terracotta Red */
+      --color-primary-dark: #8f261a;  /* Deep Spice Red */
+      --color-accent: #d9822b;        /* Saffron Amber */
+      --color-cream: #faf6f0;         /* Warm Parchment Cream */
+      --color-cream-alt: #f2ebe1;     /* Soft Sand Cream */
+      --color-charcoal: #1e1d1b;      /* Deep Charcoal */
+      --color-charcoal-light: #363430;/* Warm Slate */
+      --color-text: #2c2a27;          /* Accessible Dark Body Text */
+      --color-text-muted: #666159;    /* Muted Earthy Gray */
+      --color-white: #ffffff;
+      --color-border: #e4dcd0;
+
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --shadow-sm: 0 4px 12px rgba(30, 29, 27, 0.06);
+      --shadow-md: 0 10px 25px rgba(30, 29, 27, 0.1);
+      --shadow-lg: 0 20px 40px rgba(30, 29, 27, 0.16);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-cream);
+      color: var(--color-text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ==========================================================================
+       2. REUSABLE UTILITY & TYPOGRAPHY CLASSES
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-padding {
+      padding: 5.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-subtitle {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      color: var(--color-charcoal);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: 0 6px 18px rgba(185, 56, 41, 0.28);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(185, 56, 41, 0.36);
+    }
+
+    .btn-outline-light {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: var(--color-white);
+      border-color: var(--color-white);
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline-light:hover {
+      background-color: var(--color-white);
+      color: var(--color-charcoal);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR (With Pure CSS Mobile Hamburger Menu)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(250, 246, 240, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--color-charcoal);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+
+    .logo span {
+      color: var(--color-primary);
+    }
+
+    /* Hide native checkbox for pure CSS hamburger toggle */
+    #nav-toggle {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger-label {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .hamburger-label span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--color-charcoal);
+      border-radius: 3px;
+      transition: var(--transition);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-white);
+      background: 
+        linear-gradient(135deg, rgba(22, 20, 18, 0.82) 0%, rgba(44, 24, 18, 0.68) 100%),
+        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      animation: fadeInUp 0.9s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(217, 130, 43, 0.25);
+      border: 1px solid rgba(217, 130, 43, 0.65);
+      color: #ffd9a8;
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      color: #f3ece1;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.1rem;
+    }
+
+    /* ==========================================================================
+       5. ABOUT SECTION
+       ========================================================================== */
+    .about {
+      background-color: var(--color-cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.65rem);
+      color: var(--color-charcoal);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text p {
+      color: var(--color-text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .pillar-item h4 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .pillar-item p {
+      font-size: 0.88rem;
+      margin-bottom: 0;
+      line-height: 1.45;
+    }
+
+    .about-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .gallery-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-card.featured {
+      grid-column: span 2;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .gallery-card.featured img {
+      height: 250px;
+    }
+
+    .gallery-caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gallery-caption span {
+      font-size: 0.8rem;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       6. FOOD MENU SECTION
+       ========================================================================== */
+    .menu-section {
+      background-color: var(--color-cream-alt);
+    }
+
+    /* Quick category jump pills */
+    .category-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .category-pill {
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      background-color: var(--color-white);
+      color: var(--color-charcoal);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-pill:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    .menu-category-block {
+      margin-bottom: 4rem;
+    }
+
+    .menu-category-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .category-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .category-heading h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      white-space: nowrap;
+    }
+
+    .category-line {
+      height: 1px;
+      width: 100%;
+      background-color: var(--color-border);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(185, 56, 41, 0.3);
+    }
+
+    .menu-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .menu-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .menu-card:hover .menu-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .menu-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .badge-bestseller {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .badge-chef {
+      background-color: var(--color-charcoal);
+      color: #ffd27d;
+    }
+
+    .menu-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .menu-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .menu-title {
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
+      color: var(--color-charcoal);
+      font-weight: 700;
+    }
+
+    .menu-price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      background-color: rgba(185, 56, 41, 0.08);
+      padding: 0.2rem 0.65rem;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .menu-desc {
+      color: var(--color-text-muted);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       7. SPECIAL OFFERS SECTION
+       ========================================================================== */
+    .offers-section {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      position: relative;
+    }
+
+    .offers-section .section-title {
+      color: var(--color-white);
+    }
+
+    .offers-section .section-subtitle {
+      color: #f3b165;
+    }
+
+    .offers-section .section-desc {
+      color: #cfc8be;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .offer-card {
+      background: linear-gradient(145deg, #2a2825 0%, #22201d 100%);
+      border: 2px dashed rgba(217, 130, 43, 0.55);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .offer-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .offer-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+
+    .offer-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: #ffd9a8;
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+    }
+
+    .offer-card p {
+      color: #dcd5cb;
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-validity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #f3b165;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-card .btn {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       8. CUSTOMER REVIEWS SECTION
+       ========================================================================== */
+    .reviews-section {
+      background-color: var(--color-cream);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-stars {
+      color: #e59819;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .review-text {
+      font-style: italic;
+      color: var(--color-text);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .reviewer-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-primary);
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      color: var(--color-charcoal);
+      font-size: 0.98rem;
+    }
+
+    .reviewer-meta {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ==========================================================================
+       9. CONTACT & LOCATION SECTION
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--color-cream-alt);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3rem;
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .contact-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      background-color: rgba(185, 56, 41, 0.1);
+      color: var(--color-primary);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.15rem;
+    }
+
+    .info-item h4 {
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.15rem;
+    }
+
+    .info-item p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      display: grid;
+      place-items: center;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-3px);
+    }
+
+    .map-container {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      height: 210px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Contact / Reservation Form */
+    .contact-form-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-box > p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      background-color: var(--color-cream);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background-color: var(--color-white);
+      box-shadow: 0 0 0 4px rgba(185, 56, 41, 0.12);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 115px;
+    }
+
+    .contact-form-box .btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       10. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--color-charcoal);
+      color: #cfc8be;
+      padding: 4.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand .logo {
+      color: var(--color-white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      max-width: 360px;
+      line-height: 1.65;
+    }
+
+    .footer-col h4 {
+      color: var(--color-white);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: #f3b165;
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       11. CSS-ONLY INTERACTIVE MODAL (:target) FOR TABLE BOOKING & OFFERS
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 18, 16, 0.78);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay:target {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      max-width: 480px;
+      width: 100%;
+      padding: 2.25rem;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay:target .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--color-text-muted);
+      font-weight: 700;
+    }
+
+    .modal-close:hover {
+      color: var(--color-primary);
+    }
+
+    .modal-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    .modal-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS (Tablet & Mobile)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 4rem 0;
+      }
+
+      /* Mobile Navigation Drawer */
+      .hamburger-label {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-cream);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.75rem 1.5rem 2rem;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+        gap: 1.5rem;
+        display: none;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1.1rem;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        font-size: 1.05rem;
+      }
+
+      #nav-toggle:checked ~ .nav-menu {
+        display: flex;
+      }
+
+      /* Animate hamburger into X when checked */
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(2) {
+        opacity: 0;
+      }
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card.featured {
+        grid-column: span 1;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Zaffran & Spice Home">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        Zaffran <span>&amp; Spice</span>
+      </a>
+
+      <!-- Pure CSS Mobile Menu Toggle -->
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="hamburger-label" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#book-modal" class="btn btn-primary">Book a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="hero-badge">Authentic Indian Culinary Craft</span>
+        <h1>A Symphony of Heritage Spices &amp; Modern Warmth</h1>
+        <p>Fresh food, great taste, unforgettable moments—handcrafted daily with heirloom spices, clay-oven artistry, and locally sourced farm produce.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">View Menu</a>
+          <a href="#book-modal" class="btn btn-outline-light">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="about section-padding">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span class="section-subtitle">Our Story</span>
+          <h2>Where Tradition Meets Contemporary Hospitality</h2>
+          <p>Founded with a passion for regional Indian gastronomy, <strong>Zaffran &amp; Spice</strong> brings centuries-old royal recipes into a welcoming, contemporary dining room. Every curry is slow-simmered from scratch, and every flatbread is baked fresh to order in our charcoal tandoor.</p>
+          <p>Whether you are celebrating a milestone dinner or sharing casual small plates with friends, our attentive team ensures every visit feels effortless and memorable.</p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <h4>Fresh Ingredients</h4>
+              <p>Whole roasted spices &amp; organic farm produce daily.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Friendly Service</h4>
+              <p>Warm, attentive hospitality tailored to every guest.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Cozy Atmosphere</h4>
+              <p>Candlelit earthen interiors designed for lingering.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-secondary">Visit Our Kitchen</a>
+        </div>
+
+        <div class="about-gallery">
+          <figure class="gallery-card featured">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Warm candlelit interior dining room at Zaffran & Spice" onerror="this.src='https://placehold.co/900x450/2c2a27/faf6f0?text=Cozy+Dining+Room'">
+            <figcaption class="gallery-caption">
+              Intimate Amber-Lit Dining Room
+              <span>Seats up to 85 guests</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Freshly ground Indian spices in brass bowls" onerror="this.src='https://placehold.co/600x400/b93829/ffffff?text=Heirloom+Spices'">
+            <figcaption class="gallery-caption">
+              Hand-Roasted Spices
+              <span>Ground daily</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Assorted freshly baked naan and Indian feast" onerror="this.src='https://placehold.co/600x400/d9822b/ffffff?text=Clay+Oven+Craft'">
+            <figcaption class="gallery-caption">
+              Charcoal Tandoor Craft
+              <span>Live clay oven</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. FOOD MENU SECTION (12 Items across 4 Categories)
+         ====================================================================== -->
+    <section id="menu" class="menu-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Curated Flavors</span>
+          <h2 class="section-title">Explore Our Signature Menu</h2>
+          <p class="section-desc">Thoughtfully crafted dishes balancing bold aromatics, delicate textures, and vibrant seasonal ingredients.</p>
+        </div>
+
+        <!-- Category Quick Jump Links -->
+        <div class="category-nav" aria-label="Menu Categories">
+          <a href="#cat-starters" class="category-pill">Starters</a>
+          <a href="#cat-mains" class="category-pill">Main Course</a>
+          <a href="#cat-desserts" class="category-pill">Desserts</a>
+          <a href="#cat-drinks" class="category-pill">Drinks</a>
+        </div>
+
+        <!-- CATEGORY 1: STARTERS -->
+        <div id="cat-starters" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Starters &amp; Small Plates</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=80" alt="Crispy Punjabi Samosa Chaat" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Samosa+Chaat'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Tamarind Samosa Chaat</h4>
+                  <span class="menu-price">$9.50</span>
+                </div>
+                <p class="menu-desc">Flaky spiced potato pastry topped with whipped yogurt, sweet tamarind glaze, mint chutney, and crunchy sev.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=700&q=80" alt="Chargrilled Tandoori Paneer Tikka" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Paneer+Tikka'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Smoked Paneer Tikka</h4>
+                  <span class="menu-price">$13.00</span>
+                </div>
+                <p class="menu-desc">House-pressed cottage cheese marinated in Kashmiri chili, hung curd, and carom seeds, blistered in our clay oven.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Malai Chicken Seekh Kebabs" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Chicken+Kebabs'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Saffron Murgh Malai Kebab</h4>
+                  <span class="menu-price">$14.50</span>
+                </div>
+                <p class="menu-desc">Succulent free-range chicken skewers infused with aged cheddar, green cardamom, and toasted cashew cream.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: MAIN COURSE -->
+        <div id="cat-mains" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Main Course</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Old Delhi Butter Chicken Masala" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Butter+Chicken'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Old Delhi Butter Chicken</h4>
+                  <span class="menu-price">$19.50</span>
+                </div>
+                <p class="menu-desc">Tandoor-roasted chicken tikka simmered in a velvety heirloom tomato, fenugreek, and cultured butter gravy.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Hyderabadi Dum Lamb Biryani" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Lamb+Biryani'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Royal Hyderabadi Lamb Biryani</h4>
+                  <span class="menu-price">$22.00</span>
+                </div>
+                <p class="menu-desc">Aged basmati rice layered with tender spiced lamb, saffron milk, caramelized shallots, and mint; served with raita.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="24-Hour Slow Cooked Dal Makhani" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Dal+Makhani'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">24-Hour Dal Makhani &amp; Garlic Naan</h4>
+                  <span class="menu-price">$17.50</span>
+                </div>
+                <p class="menu-desc">Whole black urad lentils slow-cooked overnight over dying embers with ginger, tomato, and a swirl of sweet cream.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: DESSERTS -->
+        <div id="cat-desserts" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Artisanal Desserts</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?auto=format&fit=crop&w=700&q=80" alt="Warm Gulab Jamun with Pistachios" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Gulab+Jamun'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Rose &amp; Cardamom Gulab Jamun</h4>
+                  <span class="menu-price">$8.00</span>
+                </div>
+                <p class="menu-desc">Warm golden milk-solid dumplings steeped in saffron-rose syrup, crowned with roasted Iranian pistachios.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80" alt="Saffron Pistachio Rasmalai" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Saffron+Rasmalai'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Chilled Saffron Rasmalai</h4>
+                  <span class="menu-price">$8.75</span>
+                </div>
+                <p class="menu-desc">Delicate cottage cheese medallions poached in reduced cardamom milk, garnished with almond slivers and edible silver leaf.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" alt="Cardamom Mango Kulfi Parfait" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Mango+Kulfi'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Alphonso Mango Kulfi</h4>
+                  <span class="menu-price">$9.00</span>
+                </div>
+                <p class="menu-desc">Traditional slow-churned Indian ice cream infused with Ratnagiri Alphonso mango purée and crushed green cardamom.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: DRINKS -->
+        <div id="cat-drinks" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Craft Drinks &amp; Refreshments</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Chilled Mango Lassi Smoothie" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Mango+Lassi'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Royal Alphonso Mango Lassi</h4>
+                  <span class="menu-price">$6.50</span>
+                </div>
+                <p class="menu-desc">Creamy probiotic yogurt blended with sweet Alphonso mango, a hint of cardamom, and toasted pistachio dust.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=700&q=80" alt="Spiced Indian Masala Chai" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Masala+Chai'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Hand-Pounded Masala Chai</h4>
+                  <span class="menu-price">$4.75</span>
+                </div>
+                <p class="menu-desc">Assam black tea brewed with fresh crushed ginger, cloves, cinnamon bark, cardamom pods, and velvety steamed milk.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Sparkling Rose & Hibiscus Cooler" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Rose+Cooler'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Spiced Tamarind &amp; Lime Fizz</h4>
+                  <span class="menu-price">$6.95</span>
+                </div>
+                <p class="menu-desc">Tangy roasted cumin and tamarind reduction topped with chilled sparkling water, fresh lime juice, and garden mint.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SPECIAL OFFERS SECTION
+         ====================================================================== -->
+    <section id="offers" class="offers-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Limited-Time Privileges</span>
+          <h2 class="section-title">Exclusive Dining Offers</h2>
+          <p class="section-desc">Gather around the table and enjoy special seasonal savings crafted for weekday lunches, weekend feasts, and family celebrations.</p>
+        </div>
+
+        <div class="offers-grid">
+          <!-- Offer 1 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Weekday Lunch Special</span>
+              <h3>Buy 1 Get 1 Free on Signature Curries</h3>
+              <p>Order any main course from our signature curry selection and receive a second curry of equal or lesser value on the house.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Mon – Thu | 11:30 AM – 3:00 PM</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+
+          <!-- Offer 2 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Weekend Feast</span>
+              <h3>20% Off on Weekend Dinner Tables</h3>
+              <p>Celebrate Friday and Saturday evenings with 20% off your entire food bill when dining in with a reservation of two or more guests.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Fri – Sun | After 5:30 PM</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+
+          <!-- Offer 3 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Best Value Bundle</span>
+              <h3>Grand Family Combo Deal ($64)</h3>
+              <p>Includes 2 Starters, 3 Full Main Courses, 4 Assorted Tandoori Naans, Basmati Pulao, and 4 Gulab Jamuns—feeds 4 to 5 generously.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Daily | Dine-In &amp; Takeaway</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CUSTOMER REVIEWS SECTION
+         ====================================================================== -->
+    <section id="reviews" class="reviews-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Guest Stories</span>
+          <h2 class="section-title">Loved by Food Enthusiasts</h2>
+          <p class="section-desc">Read what our regulars and first-time visitors say about their dining experience at Zaffran &amp; Spice.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“The Old Delhi Butter Chicken and Garlic Naan are unmatched. You can genuinely taste the freshness of the roasted spices, and the warm ambiance makes you want to stay all evening.”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Portrait of Ananya Sharma" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=AS'">
+              <div>
+                <div class="reviewer-name">Ananya Sharma</div>
+                <div class="reviewer-meta">Verified Diner • 2 weeks ago</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“We ordered the Family Combo Deal for a birthday dinner and were blown away by the portion sizes and presentation. The Hyderabadi Lamb Biryani was aromatic perfection!”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Portrait of Marcus Vance" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=MV'">
+              <div>
+                <div class="reviewer-name">Marcus Vance</div>
+                <div class="reviewer-meta">Local Guide • 1 month ago</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“Incredible vegetarian options! The Smoked Paneer Tikka and 24-Hour Dal Makhani have so much depth of flavor. Topped it off with Mango Lassi and warm Gulab Jamun.”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Portrait of Elena Rostova" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=ER'">
+              <div>
+                <div class="reviewer-name">Elena Rostova</div>
+                <div class="reviewer-meta">Food Critic • 3 weeks ago</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. CONTACT & LOCATION SECTION
+         ====================================================================== -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Visit Us or Send a Message</h2>
+          <p class="section-desc">Have a dietary question, private event inquiry, or feedback? Reach out directly or drop by for dinner.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left Column: Info & Map -->
+          <div class="contact-details">
+            <h3>Restaurant Details</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">📍</div>
+                <div>
+                  <h4>Address</h4>
+                  <p>742 Saffron Heritage Avenue, Culinary District, NY 10012</p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">📞</div>
+                <div>
+                  <h4>Phone Number</h4>
+                  <p><a href="tel:+12125550194">+1 (212) 555-0194</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <h4>Email Address</h4>
+                  <p><a href="mailto:hello@zaffranandspice.com">hello@zaffranandspice.com</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">🕒</div>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <p>Mon – Thu: 11:30 AM – 10:00 PM<br>Fri – Sun: 11:30 AM – 11:30 PM</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-row" aria-label="Social Media Links">
+              <a href="#contact" class="social-link" aria-label="Instagram" title="Instagram">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#contact" class="social-link" aria-label="Facebook" title="Facebook">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+              </a>
+              <a href="#contact" class="social-link" aria-label="X (Twitter)" title="X (Twitter)">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+              <iframe 
+                title="Zaffran & Spice Location Map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0059%2C40.7128%2C-73.9859%2C40.7328&amp;layer=mapnik&amp;marker=40.7228%2C-73.9959" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form-box">
+            <h3>Send Us a Message</h3>
+            <p>We respond to all inquiries within a few hours during service days.</p>
+
+            <form action="#message-sent" method="get">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g., Priya Patel" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g., priya@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="e.g., +1 (555) 234-5678" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message or Special Request</label>
+                <textarea id="contact-message" name="message" class="form-control" placeholder="Tell us about your inquiry, group size, or dietary notes..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       8. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-icon" aria-hidden="true">✦</span>
+            Zaffran <span>&amp; Spice</span>
+          </a>
+          <p>Celebrating the timeless flavors of India with heirloom spices, fresh seasonal produce, and heartfelt hospitality in every dish.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#offers">Special Offers</a></li>
+            <li><a href="#reviews">Guest Reviews</a></li>
+            <li><a href="#contact">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dining &amp; Hours</h4>
+          <ul class="footer-links">
+            <li><a href="#book-modal">Book a Table</a></li>
+            <li><a href="#offers">Weekend 20% Off</a></li>
+            <li><a href="#contact">Private Dining Events</a></li>
+            <li>Mon–Thu: 11:30 AM – 10:00 PM</li>
+            <li>Fri–Sun: 11:30 AM – 11:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zaffran &amp; Spice Restaurant. All rights reserved.</p>
+        <div class="social-row" style="margin-bottom: 0;">
+          <a href="#contact" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#contact" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#contact" class="social-link" aria-label="X">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PURE CSS MODALS (:target) FOR TABLE BOOKING, OFFERS & CONFIRMATIONS
+       ======================================================================== -->
+  <!-- 1. Book a Table Modal -->
+  <div id="book-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="book-modal-title">
+    <div class="modal-box">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <h3 id="book-modal-title">Reserve Your Table</h3>
+      <p>Instant table request at Zaffran &amp; Spice. No prepayment required.</p>
+      <form action="#booking-confirmed" method="get">
+        <div class="form-group">
+          <label for="res-name">Guest Name</label>
+          <input type="text" id="res-name" class="form-control" placeholder="Your full name" required>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Guests</label>
+            <select id="res-guests" class="form-control">
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5–6 Guests</option>
+              <option>7+ Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="res-phone">Phone Number</label>
+          <input type="tel" id="res-phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Claim Offer Modal -->
+  <div id="offer-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="offer-modal-title">
+    <div class="modal-box">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <h3 id="offer-modal-title">Offer Voucher Unlocked!</h3>
+      <p>Present code <strong style="color: var(--color-primary);">ZAFFRAN2026</strong> to your server when ordering or enter your email below to save it.</p>
+      <form action="#booking-confirmed" method="get">
+        <div class="form-group">
+          <label for="voucher-email">Send Voucher to Email</label>
+          <input type="email" id="voucher-email" class="form-control" placeholder="you@example.com" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Save Voucher &amp; Book Table</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Confirmation Feedback Modal -->
+  <div id="booking-confirmed" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box" style="text-align: center;">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">✓</div>
+      <h3>Thank You!</h3>
+      <p>Your request has been received by our hospitality team. We look forward to welcoming you to Zaffran &amp; Spice soon.</p>
+      <a href="#close" class="btn btn-primary" style="width: 100%;">Back to Website</a>
+    </div>
+  </div>
+
+  <div id="message-sent" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box" style="text-align: center;">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">✉️</div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for contacting Zaffran &amp; Spice. Our team will reply to your email or phone shortly.</p>
+      <a href="#close" class="btn btn-primary" style="width: 100%;">Done</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+l="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & RESET
+       Palette: Warm Terracotta Red, Rich Cream, Deep Charcoal, Saffron Gold
+       ========================================================================== */
+    :root {
+      --color-primary: #b93829;       /* Warm Terracotta Red */
+      --color-primary-dark: #8f261a;  /* Deep Spice Red */
+      --color-accent: #d9822b;        /* Saffron Amber */
+      --color-cream: #faf6f0;         /* Warm Parchment Cream */
+      --color-cream-alt: #f2ebe1;     /* Soft Sand Cream */
+      --color-charcoal: #1e1d1b;      /* Deep Charcoal */
+      --color-charcoal-light: #363430;/* Warm Slate */
+      --color-text: #2c2a27;          /* Accessible Dark Body Text */
+      --color-text-muted: #666159;    /* Muted Earthy Gray */
+      --color-white: #ffffff;
+      --color-border: #e4dcd0;
+
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --shadow-sm: 0 4px 12px rgba(30, 29, 27, 0.06);
+      --shadow-md: 0 10px 25px rgba(30, 29, 27, 0.1);
+      --shadow-lg: 0 20px 40px rgba(30, 29, 27, 0.16);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-cream);
+      color: var(--color-text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ==========================================================================
+       2. REUSABLE UTILITY & TYPOGRAPHY CLASSES
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-padding {
+      padding: 5.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-subtitle {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      color: var(--color-charcoal);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: 0 6px 18px rgba(185, 56, 41, 0.28);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(185, 56, 41, 0.36);
+    }
+
+    .btn-outline-light {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: var(--color-white);
+      border-color: var(--color-white);
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline-light:hover {
+      background-color: var(--color-white);
+      color: var(--color-charcoal);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR (With Pure CSS Mobile Hamburger Menu)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(250, 246, 240, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--color-charcoal);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+
+    .logo span {
+      color: var(--color-primary);
+    }
+
+    /* Hide native checkbox for pure CSS hamburger toggle */
+    #nav-toggle {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger-label {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .hamburger-label span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--color-charcoal);
+      border-radius: 3px;
+      transition: var(--transition);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-white);
+      background: 
+        linear-gradient(135deg, rgba(22, 20, 18, 0.82) 0%, rgba(44, 24, 18, 0.68) 100%),
+        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      animation: fadeInUp 0.9s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(217, 130, 43, 0.25);
+      border: 1px solid rgba(217, 130, 43, 0.65);
+      color: #ffd9a8;
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      color: #f3ece1;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.1rem;
+    }
+
+    /* ==========================================================================
+       5. ABOUT SECTION
+       ========================================================================== */
+    .about {
+      background-color: var(--color-cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.65rem);
+      color: var(--color-charcoal);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text p {
+      color: var(--color-text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .pillar-item h4 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .pillar-item p {
+      font-size: 0.88rem;
+      margin-bottom: 0;
+      line-height: 1.45;
+    }
+
+    .about-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .gallery-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-card.featured {
+      grid-column: span 2;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .gallery-card.featured img {
+      height: 250px;
+    }
+
+    .gallery-caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gallery-caption span {
+      font-size: 0.8rem;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       6. FOOD MENU SECTION
+       ========================================================================== */
+    .menu-section {
+      background-color: var(--color-cream-alt);
+    }
+
+    /* Quick category jump pills */
+    .category-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .category-pill {
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      background-color: var(--color-white);
+      color: var(--color-charcoal);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-pill:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    .menu-category-block {
+      margin-bottom: 4rem;
+    }
+
+    .menu-category-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .category-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .category-heading h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      white-space: nowrap;
+    }
+
+    .category-line {
+      height: 1px;
+      width: 100%;
+      background-color: var(--color-border);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(185, 56, 41, 0.3);
+    }
+
+    .menu-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .menu-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .menu-card:hover .menu-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .menu-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .badge-bestseller {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .badge-chef {
+      background-color: var(--color-charcoal);
+      color: #ffd27d;
+    }
+
+    .menu-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .menu-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .menu-title {
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
+      color: var(--color-charcoal);
+      font-weight: 700;
+    }
+
+    .menu-price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      background-color: rgba(185, 56, 41, 0.08);
+      padding: 0.2rem 0.65rem;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .menu-desc {
+      color: var(--color-text-muted);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       7. SPECIAL OFFERS SECTION
+       ========================================================================== */
+    .offers-section {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      position: relative;
+    }
+
+    .offers-section .section-title {
+      color: var(--color-white);
+    }
+
+    .offers-section .section-subtitle {
+      color: #f3b165;
+    }
+
+    .offers-section .section-desc {
+      color: #cfc8be;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .offer-card {
+      background: linear-gradient(145deg, #2a2825 0%, #22201d 100%);
+      border: 2px dashed rgba(217, 130, 43, 0.55);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .offer-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .offer-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+
+    .offer-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: #ffd9a8;
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+    }
+
+    .offer-card p {
+      color: #dcd5cb;
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-validity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #f3b165;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-card .btn {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       8. CUSTOMER REVIEWS SECTION
+       ========================================================================== */
+    .reviews-section {
+      background-color: var(--color-cream);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-stars {
+      color: #e59819;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .review-text {
+      font-style: italic;
+      color: var(--color-text);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .reviewer-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-primary);
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      color: var(--color-charcoal);
+      font-size: 0.98rem;
+    }
+
+    .reviewer-meta {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ==========================================================================
+       9. CONTACT & LOCATION SECTION
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--color-cream-alt);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3rem;
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .contact-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      background-color: rgba(185, 56, 41, 0.1);
+      color: var(--color-primary);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.15rem;
+    }
+
+    .info-item h4 {
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.15rem;
+    }
+
+    .info-item p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      display: grid;
+      place-items: center;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-3px);
+    }
+
+    .map-container {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      height: 210px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Contact / Reservation Form */
+    .contact-form-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-box > p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      background-color: var(--color-cream);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background-color: var(--color-white);
+      box-shadow: 0 0 0 4px rgba(185, 56, 41, 0.12);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 115px;
+    }
+
+    .contact-form-box .btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       10. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--color-charcoal);
+      color: #cfc8be;
+      padding: 4.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand .logo {
+      color: var(--color-white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      max-width: 360px;
+      line-height: 1.65;
+    }
+
+    .footer-col h4 {
+      color: var(--color-white);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: #f3b165;
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       11. CSS-ONLY INTERACTIVE MODAL (:target) FOR TABLE BOOKING & OFFERS
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 18, 16, 0.78);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay:target {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      max-width: 480px;
+      width: 100%;
+      padding: 2.25rem;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay:target .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--color-text-muted);
+      font-weight: 700;
+    }
+
+    .modal-close:hover {
+      color: var(--color-primary);
+    }
+
+    .modal-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    .modal-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS (Tablet & Mobile)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 4rem 0;
+      }
+
+      /* Mobile Navigation Drawer */
+      .hamburger-label {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-cream);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.75rem 1.5rem 2rem;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+        gap: 1.5rem;
+        display: none;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1.1rem;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        font-size: 1.05rem;
+      }
+
+      #nav-toggle:checked ~ .nav-menu {
+        display: flex;
+      }
+
+      /* Animate hamburger into X when checked */
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(2) {
+        opacity: 0;
+      }
+      #nav-toggle:checked ~ .hamburger-label span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card.featured {
+        grid-column: span 1;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Zaffran & Spice Home">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        Zaffran <span>&amp; Spice</span>
+      </a>
+
+      <!-- Pure CSS Mobile Menu Toggle -->
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="hamburger-label" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#book-modal" class="btn btn-primary">Book a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="hero-badge">Authentic Indian Culinary Craft</span>
+        <h1>A Symphony of Heritage Spices &amp; Modern Warmth</h1>
+        <p>Fresh food, great taste, unforgettable moments—handcrafted daily with heirloom spices, clay-oven artistry, and locally sourced farm produce.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">View Menu</a>
+          <a href="#book-modal" class="btn btn-outline-light">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="about section-padding">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span class="section-subtitle">Our Story</span>
+          <h2>Where Tradition Meets Contemporary Hospitality</h2>
+          <p>Founded with a passion for regional Indian gastronomy, <strong>Zaffran &amp; Spice</strong> brings centuries-old royal recipes into a welcoming, contemporary dining room. Every curry is slow-simmered from scratch, and every flatbread is baked fresh to order in our charcoal tandoor.</p>
+          <p>Whether you are celebrating a milestone dinner or sharing casual small plates with friends, our attentive team ensures every visit feels effortless and memorable.</p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <h4>Fresh Ingredients</h4>
+              <p>Whole roasted spices &amp; organic farm produce daily.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Friendly Service</h4>
+              <p>Warm, attentive hospitality tailored to every guest.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Cozy Atmosphere</h4>
+              <p>Candlelit earthen interiors designed for lingering.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-secondary">Visit Our Kitchen</a>
+        </div>
+
+        <div class="about-gallery">
+          <figure class="gallery-card featured">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Warm candlelit interior dining room at Zaffran & Spice" onerror="this.src='https://placehold.co/900x450/2c2a27/faf6f0?text=Cozy+Dining+Room'">
+            <figcaption class="gallery-caption">
+              Intimate Amber-Lit Dining Room
+              <span>Seats up to 85 guests</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" alt="Freshly ground Indian spices in brass bowls" onerror="this.src='https://placehold.co/600x400/b93829/ffffff?text=Heirloom+Spices'">
+            <figcaption class="gallery-caption">
+              Hand-Roasted Spices
+              <span>Ground daily</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Assorted freshly baked naan and Indian feast" onerror="this.src='https://placehold.co/600x400/d9822b/ffffff?text=Clay+Oven+Craft'">
+            <figcaption class="gallery-caption">
+              Charcoal Tandoor Craft
+              <span>Live clay oven</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. FOOD MENU SECTION (12 Items across 4 Categories)
+         ====================================================================== -->
+    <section id="menu" class="menu-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Curated Flavors</span>
+          <h2 class="section-title">Explore Our Signature Menu</h2>
+          <p class="section-desc">Thoughtfully crafted dishes balancing bold aromatics, delicate textures, and vibrant seasonal ingredients.</p>
+        </div>
+
+        <!-- Category Quick Jump Links -->
+        <div class="category-nav" aria-label="Menu Categories">
+          <a href="#cat-starters" class="category-pill">Starters</a>
+          <a href="#cat-mains" class="category-pill">Main Course</a>
+          <a href="#cat-desserts" class="category-pill">Desserts</a>
+          <a href="#cat-drinks" class="category-pill">Drinks</a>
+        </div>
+
+        <!-- CATEGORY 1: STARTERS -->
+        <div id="cat-starters" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Starters &amp; Small Plates</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=80" alt="Crispy Punjabi Samosa Chaat" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Samosa+Chaat'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Tamarind Samosa Chaat</h4>
+                  <span class="menu-price">$9.50</span>
+                </div>
+                <p class="menu-desc">Flaky spiced potato pastry topped with whipped yogurt, sweet tamarind glaze, mint chutney, and crunchy sev.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=700&q=80" alt="Chargrilled Tandoori Paneer Tikka" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Paneer+Tikka'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Smoked Paneer Tikka</h4>
+                  <span class="menu-price">$13.00</span>
+                </div>
+                <p class="menu-desc">House-pressed cottage cheese marinated in Kashmiri chili, hung curd, and carom seeds, blistered in our clay oven.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Malai Chicken Seekh Kebabs" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Chicken+Kebabs'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Saffron Murgh Malai Kebab</h4>
+                  <span class="menu-price">$14.50</span>
+                </div>
+                <p class="menu-desc">Succulent free-range chicken skewers infused with aged cheddar, green cardamom, and toasted cashew cream.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: MAIN COURSE -->
+        <div id="cat-mains" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Main Course</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Old Delhi Butter Chicken Masala" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Butter+Chicken'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Old Delhi Butter Chicken</h4>
+                  <span class="menu-price">$19.50</span>
+                </div>
+                <p class="menu-desc">Tandoor-roasted chicken tikka simmered in a velvety heirloom tomato, fenugreek, and cultured butter gravy.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Hyderabadi Dum Lamb Biryani" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Lamb+Biryani'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Royal Hyderabadi Lamb Biryani</h4>
+                  <span class="menu-price">$22.00</span>
+                </div>
+                <p class="menu-desc">Aged basmati rice layered with tender spiced lamb, saffron milk, caramelized shallots, and mint; served with raita.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="24-Hour Slow Cooked Dal Makhani" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Dal+Makhani'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">24-Hour Dal Makhani &amp; Garlic Naan</h4>
+                  <span class="menu-price">$17.50</span>
+                </div>
+                <p class="menu-desc">Whole black urad lentils slow-cooked overnight over dying embers with ginger, tomato, and a swirl of sweet cream.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: DESSERTS -->
+        <div id="cat-desserts" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Artisanal Desserts</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?auto=format&fit=crop&w=700&q=80" alt="Warm Gulab Jamun with Pistachios" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Gulab+Jamun'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Rose &amp; Cardamom Gulab Jamun</h4>
+                  <span class="menu-price">$8.00</span>
+                </div>
+                <p class="menu-desc">Warm golden milk-solid dumplings steeped in saffron-rose syrup, crowned with roasted Iranian pistachios.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80" alt="Saffron Pistachio Rasmalai" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Saffron+Rasmalai'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Chilled Saffron Rasmalai</h4>
+                  <span class="menu-price">$8.75</span>
+                </div>
+                <p class="menu-desc">Delicate cottage cheese medallions poached in reduced cardamom milk, garnished with almond slivers and edible silver leaf.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-chef">Chef’s Special</span>
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" alt="Cardamom Mango Kulfi Parfait" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Mango+Kulfi'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Alphonso Mango Kulfi</h4>
+                  <span class="menu-price">$9.00</span>
+                </div>
+                <p class="menu-desc">Traditional slow-churned Indian ice cream infused with Ratnagiri Alphonso mango purée and crushed green cardamom.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: DRINKS -->
+        <div id="cat-drinks" class="menu-category-block">
+          <div class="category-heading">
+            <h3>Craft Drinks &amp; Refreshments</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <span class="menu-badge badge-bestseller">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Chilled Mango Lassi Smoothie" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Mango+Lassi'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Royal Alphonso Mango Lassi</h4>
+                  <span class="menu-price">$6.50</span>
+                </div>
+                <p class="menu-desc">Creamy probiotic yogurt blended with sweet Alphonso mango, a hint of cardamom, and toasted pistachio dust.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=700&q=80" alt="Spiced Indian Masala Chai" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Masala+Chai'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Hand-Pounded Masala Chai</h4>
+                  <span class="menu-price">$4.75</span>
+                </div>
+                <p class="menu-desc">Assam black tea brewed with fresh crushed ginger, cloves, cinnamon bark, cardamom pods, and velvety steamed milk.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-img-wrap">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Sparkling Rose & Hibiscus Cooler" onerror="this.src='https://placehold.co/700x450/b93829/ffffff?text=Rose+Cooler'">
+              </div>
+              <div class="menu-body">
+                <div class="menu-title-row">
+                  <h4 class="menu-title">Spiced Tamarind &amp; Lime Fizz</h4>
+                  <span class="menu-price">$6.95</span>
+                </div>
+                <p class="menu-desc">Tangy roasted cumin and tamarind reduction topped with chilled sparkling water, fresh lime juice, and garden mint.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SPECIAL OFFERS SECTION
+         ====================================================================== -->
+    <section id="offers" class="offers-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Limited-Time Privileges</span>
+          <h2 class="section-title">Exclusive Dining Offers</h2>
+          <p class="section-desc">Gather around the table and enjoy special seasonal savings crafted for weekday lunches, weekend feasts, and family celebrations.</p>
+        </div>
+
+        <div class="offers-grid">
+          <!-- Offer 1 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Weekday Lunch Special</span>
+              <h3>Buy 1 Get 1 Free on Signature Curries</h3>
+              <p>Order any main course from our signature curry selection and receive a second curry of equal or lesser value on the house.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Mon – Thu | 11:30 AM – 3:00 PM</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+
+          <!-- Offer 2 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Weekend Feast</span>
+              <h3>20% Off on Weekend Dinner Tables</h3>
+              <p>Celebrate Friday and Saturday evenings with 20% off your entire food bill when dining in with a reservation of two or more guests.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Fri – Sun | After 5:30 PM</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+
+          <!-- Offer 3 -->
+          <article class="offer-card">
+            <div>
+              <span class="offer-tag">Best Value Bundle</span>
+              <h3>Grand Family Combo Deal ($64)</h3>
+              <p>Includes 2 Starters, 3 Full Main Courses, 4 Assorted Tandoori Naans, Basmati Pulao, and 4 Gulab Jamuns—feeds 4 to 5 generously.</p>
+            </div>
+            <div>
+              <div class="offer-validity">
+                <span>⏳ Valid Daily | Dine-In &amp; Takeaway</span>
+              </div>
+              <a href="#offer-modal" class="btn btn-primary">Claim Offer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CUSTOMER REVIEWS SECTION
+         ====================================================================== -->
+    <section id="reviews" class="reviews-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Guest Stories</span>
+          <h2 class="section-title">Loved by Food Enthusiasts</h2>
+          <p class="section-desc">Read what our regulars and first-time visitors say about their dining experience at Zaffran &amp; Spice.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“The Old Delhi Butter Chicken and Garlic Naan are unmatched. You can genuinely taste the freshness of the roasted spices, and the warm ambiance makes you want to stay all evening.”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Portrait of Ananya Sharma" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=AS'">
+              <div>
+                <div class="reviewer-name">Ananya Sharma</div>
+                <div class="reviewer-meta">Verified Diner • 2 weeks ago</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“We ordered the Family Combo Deal for a birthday dinner and were blown away by the portion sizes and presentation. The Hyderabadi Lamb Biryani was aromatic perfection!”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Portrait of Marcus Vance" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=MV'">
+              <div>
+                <div class="reviewer-name">Marcus Vance</div>
+                <div class="reviewer-meta">Local Guide • 1 month ago</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-text">“Incredible vegetarian options! The Smoked Paneer Tikka and 24-Hour Dal Makhani have so much depth of flavor. Topped it off with Mango Lassi and warm Gulab Jamun.”</p>
+            </div>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Portrait of Elena Rostova" class="reviewer-avatar" onerror="this.src='https://placehold.co/100x100/b93829/ffffff?text=ER'">
+              <div>
+                <div class="reviewer-name">Elena Rostova</div>
+                <div class="reviewer-meta">Food Critic • 3 weeks ago</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. CONTACT & LOCATION SECTION
+         ====================================================================== -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Visit Us or Send a Message</h2>
+          <p class="section-desc">Have a dietary question, private event inquiry, or feedback? Reach out directly or drop by for dinner.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left Column: Info & Map -->
+          <div class="contact-details">
+            <h3>Restaurant Details</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">📍</div>
+                <div>
+                  <h4>Address</h4>
+                  <p>742 Saffron Heritage Avenue, Culinary District, NY 10012</p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">📞</div>
+                <div>
+                  <h4>Phone Number</h4>
+                  <p><a href="tel:+12125550194">+1 (212) 555-0194</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <h4>Email Address</h4>
+                  <p><a href="mailto:hello@zaffranandspice.com">hello@zaffranandspice.com</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <div class="info-icon" aria-hidden="true">🕒</div>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <p>Mon – Thu: 11:30 AM – 10:00 PM<br>Fri – Sun: 11:30 AM – 11:30 PM</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-row" aria-label="Social Media Links">
+              <a href="#contact" class="social-link" aria-label="Instagram" title="Instagram">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#contact" class="social-link" aria-label="Facebook" title="Facebook">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+              </a>
+              <a href="#contact" class="social-link" aria-label="X (Twitter)" title="X (Twitter)">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+              <iframe 
+                title="Zaffran & Spice Location Map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0059%2C40.7128%2C-73.9859%2C40.7328&amp;layer=mapnik&amp;marker=40.7228%2C-73.9959" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form-box">
+            <h3>Send Us a Message</h3>
+            <p>We respond to all inquiries within a few hours during service days.</p>
+
+            <form action="#message-sent" method="get">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g., Priya Patel" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g., priya@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="e.g., +1 (555) 234-5678" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message or Special Request</label>
+                <textarea id="contact-message" name="message" class="form-control" placeholder="Tell us about your inquiry, group size, or dietary notes..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       8. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-icon" aria-hidden="true">✦</span>
+            Zaffran <span>&amp; Spice</span>
+          </a>
+          <p>Celebrating the timeless flavors of India with heirloom spices, fresh seasonal produce, and heartfelt hospitality in every dish.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#offers">Special Offers</a></li>
+            <li><a href="#reviews">Guest Reviews</a></li>
+            <li><a href="#contact">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dining &amp; Hours</h4>
+          <ul class="footer-links">
+            <li><a href="#book-modal">Book a Table</a></li>
+            <li><a href="#offers">Weekend 20% Off</a></li>
+            <li><a href="#contact">Private Dining Events</a></li>
+            <li>Mon–Thu: 11:30 AM – 10:00 PM</li>
+            <li>Fri–Sun: 11:30 AM – 11:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zaffran &amp; Spice Restaurant. All rights reserved.</p>
+        <div class="social-row" style="margin-bottom: 0;">
+          <a href="#contact" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#contact" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#contact" class="social-link" aria-label="X">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PURE CSS MODALS (:target) FOR TABLE BOOKING, OFFERS & CONFIRMATIONS
+       ======================================================================== -->
+  <!-- 1. Book a Table Modal -->
+  <div id="book-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="book-modal-title">
+    <div class="modal-box">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <h3 id="book-modal-title">Reserve Your Table</h3>
+      <p>Instant table request at Zaffran &amp; Spice. No prepayment required.</p>
+      <form action="#booking-confirmed" method="get">
+        <div class="form-group">
+          <label for="res-name">Guest Name</label>
+          <input type="text" id="res-name" class="form-control" placeholder="Your full name" required>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Guests</label>
+            <select id="res-guests" class="form-control">
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5–6 Guests</option>
+              <option>7+ Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="res-phone">Phone Number</label>
+          <input type="tel" id="res-phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Claim Offer Modal -->
+  <div id="offer-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="offer-modal-title">
+    <div class="modal-box">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <h3 id="offer-modal-title">Offer Voucher Unlocked!</h3>
+      <p>Present code <strong style="color: var(--color-primary);">ZAFFRAN2026</strong> to your server when ordering or enter your email below to save it.</p>
+      <form action="#booking-confirmed" method="get">
+        <div class="form-group">
+          <label for="voucher-email">Send Voucher to Email</label>
+          <input type="email" id="voucher-email" class="form-control" placeholder="you@example.com" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Save Voucher &amp; Book Table</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Confirmation Feedback Modal -->
+  <div id="booking-confirmed" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box" style="text-align: center;">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">✓</div>
+      <h3>Thank You!</h3>
+      <p>Your request has been received by our hospitality team. We look forward to welcoming you to Zaffran &amp; Spice soon.</p>
+      <a href="#close" class="btn btn-primary" style="width: 100%;">Back to Website</a>
+    </div>
+  </div>
+
+  <div id="message-sent" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box" style="text-align: center;">
+      <a href="#close" class="modal-close" aria-label="Close modal">&times;</a>
+      <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">✉️</div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for contacting Zaffran &amp; Spice. Our team will reply to your email or phone shortly.</p>
+      <a href="#close" class="btn btn-primary" style="width: 100%;">Done</a>
+    </div>
+  </div>
+
+</body>
+</html>
